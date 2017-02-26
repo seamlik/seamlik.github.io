@@ -1,5 +1,5 @@
 +++
-date = "2016-12-01T14:39+08:00"
+date = "2016-12-01T14:39:00+08:00"
 title = "My Open Source Activities in October to November 2016"
 
 +++

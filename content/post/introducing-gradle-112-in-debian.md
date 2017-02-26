@@ -1,5 +1,5 @@
 +++
-date = "2015-06-29T05:41+08:00"
+date = "2015-06-29T05:41:00+08:00"
 title = "Introducing Gradle 1.12 in Debian"
 
 +++

@@ -1,0 +1,26 @@
+baseURL = "https://seamlik.viska.chat"
+languageCode = "en-us"
+theme = "beautifulhugo"
+title = "Recursive Minds"
+
+[Params]
+  subtitle = "The blog site of mine."
+  favicon = "img/favicon.ico"
+  logo = "img/logo.png"
+
+[Author]
+  name = "Kai-Chung Yan (殷啟聰)"
+  facebook = "seamlik.yan"
+  github = "seamlik"
+  twitter = "seamlik"
+  linkedin = "seamlik"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "/page/about/"
+weight = 2
