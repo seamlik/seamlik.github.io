@@ -1,4 +1,4 @@
-baseURL = "https://seamlik.viska.chat"
+baseURL = "https://seamlik.github.io"
 languageCode = "en-us"
 theme = "beautifulhugo"
 title = "Recursive Minds"
