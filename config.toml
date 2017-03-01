@@ -1,7 +1,8 @@
 baseURL = "https://seamlik.github.io"
 languageCode = "en-us"
 theme = "beautifulhugo"
-title = "Recursive Minds"
+title = "The Recursive Minds of seamlik"
+disqusShortname = "seamlik-blog-github"
 
 [Params]
   subtitle = "The blog site of mine."
