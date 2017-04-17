@@ -1,6 +1,6 @@
 +++
 date = "2016-12-01T14:39:00+08:00"
-title = "My Open Source Activities in October to November 2016"
+title = "My Open Source Activities from October to November 2016"
 
 +++
 
@@ -16,7 +16,7 @@ I did not finish too many significant jobs in the last 2 months, so I am combini
   * Let `javadoc` link to the local Javadoc of `default-jdk`
 * Updated `libnative-platform-java` to [0.11](https://tracker.debian.org/news/812120)
 * Updated `gradle` to [3.1](https://tracker.debian.org/news/814966). Also updated the following packages in order to be compatible with Gradle 3.x:
-  * [`android-platform-tools-base`](https://tracker.debian.org/news/820417) 
+  * [`android-platform-tools-base`](https://tracker.debian.org/news/820417)
   * [`bnd`](https://tracker.debian.org/news/814980)
   * [`gant`](https://tracker.debian.org/news/814978)
   * [`groovy`](https://tracker.debian.org/news/815030)
