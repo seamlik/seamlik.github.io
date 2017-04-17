@@ -18,11 +18,15 @@ I am the lead developer and founder of the XMPP client [Viska](http://viska.chat
 
 Here are other ways to find me:
 
-  * LinkedIn: https://linkedin.com/in/seamlik (Hire me!)
-  * GitHub: https://github.com/seamlik
-  * Debian: https://wiki.debian.org/KaichungYan
-  * Twitter: [@seamlik](https://twitter.com/seamlik)
+  * Debian 👨‍💻: https://wiki.debian.org/KaichungYan
+  * Douban 📖🎦: https://www.douban.com/people/seamlik
+  * GitHub 👨‍💻: https://github.com/seamlik
+  * Goodreads 📖: https://www.goodreads.com/seamlik
+  * IMDb 🎦: http://www.imdb.com/user/ur58441413
+  * LinkedIn 👨‍💼: https://linkedin.com/in/seamlik (Hire me!)
+  * Steam 🎮: https://steamcommunity.com/id/seamlik
   * Twister: @seamlik (Deprecated)
+  * Twitter 🐦: [@seamlik](https://twitter.com/seamlik)
 
 History of This Site
 ====================
