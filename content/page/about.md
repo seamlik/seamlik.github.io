@@ -3,18 +3,18 @@ layout = "page"
 title = "About This Site"
 +++
 
-My name is Kai-Chung Yan (殷啟聰). I am currently a college student from Communist Empire of China majoring computer science. I love using and working with open-source softwares. I also love movie/game music, badminton, 
+My name is Kai-Chung Yan (殷啟聰). I am currently a college student from Communist Empire of China 🇨🇳 majoring computer science. I love using and working with open-source softwares. I also love movie/game music, badminton, video games and highly rated movies/tv series.
 
 I had never been maintaining a blog of my own before. I started this blog as promised to my Google Summer of Code mentor back in 2015 that I will start a blog and post my progress there publicly.
 
 Many thanks to the author of Hugo and this elegant theme!
 
-Who Am I?
-=========
+What Do I Do?
+=============
 
 I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org/AndroidTools) and [pkg-java](https://pkg-java.alioth.debian.org) packaging teams. I mostly package softwares related to [Gradle](https://gradle.org) and Android SDK. More infomation can be found at Debian's wiki page mentioned below.
 
-I am the lead developer and founder of the XMPP client [Viska](http://viska.chat), an open-source chatting software with VoIP and end-to-end encryption. It's still under development (more precisely pre-production), though.
+I am the lead developer and founder of [Viska](http://viska.chat), an open-source XMPP client on Android with VoIP and end-to-end encryption. It's still under development (more precisely pre-production), though.
 
 Here are other ways to find me:
 
