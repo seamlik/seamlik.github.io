@@ -6,8 +6,10 @@ theme = "beautifulhugo"
 title = "Blog by seamlik"
 
 [Params]
+  comments = true
   favicon = "img/favicon.ico"
   logo = "img/logo.png"
+  rss = true
 
 [Author]
   github = "seamlik"
