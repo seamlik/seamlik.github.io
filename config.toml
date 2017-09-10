@@ -1,20 +1,20 @@
 baseURL = "https://seamlik.github.io"
+defaultContentLanguage = "en"
+disqusShortname = "seamlik-blog-github"
 languageCode = "en-us"
 theme = "beautifulhugo"
-title = "The Recursive Minds of seamlik"
-disqusShortname = "seamlik-blog-github"
+title = "Blog by seamlik"
 
 [Params]
-  subtitle = "The blog site of mine."
   favicon = "img/favicon.ico"
   logo = "img/logo.png"
 
 [Author]
-  name = "Kai-Chung Yan (殷啟聰)"
-  facebook = "seamlik.yan"
   github = "seamlik"
-  twitter = "seamlik"
+  gitlab = "seamlik"
   linkedin = "seamlik"
+  name = "殷啟聰 | Kai-Chung Yan"
+  twitter = "seamlik"
 
 [[menu.main]]
     name = "Home"
@@ -23,5 +23,5 @@ disqusShortname = "seamlik-blog-github"
 
 [[menu.main]]
     name = "About"
-    url = "/page/about/"
-weight = 2
+    url = "/about/"
+    weight = 2
