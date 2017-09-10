@@ -3,7 +3,7 @@ date: 2017-09-10T16:42:09+08:00
 title: How to Contribute to Android SDK in Debian
 ---
 
-**A bit of background**: This article was written to provide freshman guidance for students who was applying for the ["Android SDK Tools in Debian" project](https://wiki.debian.org/Outreachy/Round15/Projects#Outreachy.2FRound15.2FProjects.2FAndroidSDKToolsInDebian.Android_SDK_Tools_in_Debian) in [Outreachy](https://outreachy.org).
+**A bit of background**: This article was written to provide freshman guide for students who was applying for the ["Android SDK Tools in Debian" project](https://wiki.debian.org/Outreachy/Round15/Projects#Outreachy.2FRound15.2FProjects.2FAndroidSDKToolsInDebian.Android_SDK_Tools_in_Debian) in [Outreachy](https://outreachy.org).
 
 Android SDK is available [in Debian](https://packages.debian.org/source/sid/android-sdk-meta). With these tools, Android developers are able to build their apps with pure open source software that has neither limitation on usage nor probable scary backdoors. However the packages are usually out-of-date and do not cover all components of the SDK due to the huge size of AOSP and a lack manpower. If you are interested in help us, you may find this article helpful.
 
@@ -22,6 +22,10 @@ Debian has an official IRC server (which is actually [OFTC](https://oftc.net)): 
 ### Mailing list
 
 In case you don't already know what an mailing list is, imagine it's also a group chat platform but for emails. Any email address that subscribe to the list address will receive all emails sent to the list address. Our team also has a mailing list where we make announcements and discussions that we prefer to be publicly recorded. Visit the [mailing list webpage](https://lists.alioth.debian.org/cgi-bin/mailman/listinfo/android-tools-devel) to subscribe to it.
+
+### Git Repositories
+
+We host all our code on Debian's infrastructure ([Alioth](https://anonscm.debian.org/cgit/android-tools), though it is [being replaced](https://wiki.debian.org/Alioth/GitNext) at the time). There are also [mirrors](https://github.com/debian-pkg-android-tools) on GitHub, though we do not accept pull request there because that would be beyond Debian's workflow.
 
 ## Learn to Maintain Debian Packages
 
