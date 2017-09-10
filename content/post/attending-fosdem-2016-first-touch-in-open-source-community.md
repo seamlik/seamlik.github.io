@@ -1,8 +1,7 @@
-+++
-title = "Attending FOSDEM 2016: First Touch in Open Source Community"
-date = "2016-03-04T14:51:00+08:00"
-
-+++
+---
+date: 2016-03-04T14:51:00+08:00
+title: 'Attending FOSDEM 2016: First Touch in Open Source Community'
+---
 
 ![](https://farm2.staticflickr.com/1535/25443641715_a5995719e3_o_d.jpg)
 

@@ -1,8 +1,7 @@
-+++
-date = "2016-10-02T10:42:00+08:00"
-title = "My Open Source Activities in September 2016"
-
-+++
+---
+date: 2016-10-02T10:42:00+08:00
+title: My Open Source Activities in September 2016
+---
 
 Finally I decided to mark down my activities in open source communities every several months.
 

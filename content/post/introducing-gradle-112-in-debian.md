@@ -1,8 +1,7 @@
-+++
-date = "2015-06-29T05:41:00+08:00"
-title = "Introducing Gradle 1.12 in Debian"
-
-+++
+---
+date: 2015-06-29T05:41:00+08:00
+title: Introducing Gradle 1.12 in Debian
+---
 
 ![](http://gradle.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/gradlephant-291x300.png)
 

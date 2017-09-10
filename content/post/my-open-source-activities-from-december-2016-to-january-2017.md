@@ -1,8 +1,7 @@
-+++
-title = "My Open-Source Activities from December 2016 to January 2017"
-date = "2017-02-26T16:22:35+08:00"
-
-+++
+---
+date: 2017-02-26T16:22:35+08:00
+title: My Open-Source Activities from December 2016 to January 2017
+---
 
 I am such a lazy person that this post should have shown up a year ago... 🤧
 

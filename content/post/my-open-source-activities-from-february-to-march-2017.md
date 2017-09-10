@@ -1,7 +1,7 @@
-+++
-title = "My Open-Source Activities from February to March 2017"
-date = "2017-04-17T23:48:00+08:00"
-+++
+---
+date: 2017-04-17T23:48:00+08:00
+title: My Open-Source Activities from February to March 2017
+---
 
 After I started focusing my energy on my [capstone project](https://viska.chat), fewer and fewer contents will be present in the subsequent posts.
 

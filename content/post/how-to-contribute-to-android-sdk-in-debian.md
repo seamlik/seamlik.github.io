@@ -1,6 +1,6 @@
 ---
-title: "How to Contribute to Android SDK in Debian"
 date: 2017-09-10T16:42:09+08:00
+title: How to Contribute to Android SDK in Debian
 ---
 
 **A bit of background**: This article was written to provide freshman guidance for students who was applying for the ["Android SDK Tools in Debian" project](https://wiki.debian.org/Outreachy/Round15/Projects#Outreachy.2FRound15.2FProjects.2FAndroidSDKToolsInDebian.Android_SDK_Tools_in_Debian) in [Outreachy](https://outreachy.org).
