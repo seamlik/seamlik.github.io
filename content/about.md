@@ -12,21 +12,9 @@ Many thanks to the authors of Hugo and this elegant theme!
 What Do I Do?
 =============
 
-I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org/AndroidTools) and [pkg-java](https://pkg-java.alioth.debian.org) packaging teams. I mostly package software related to [Gradle](https://gradle.org) and Android SDK. More infomation can be found at Debian's wiki page mentioned below.
+I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org/AndroidTools) and [pkg-java](https://pkg-java.alioth.debian.org) packaging teams. I mostly package software related to [Gradle](https://gradle.org) and Android SDK. More infomation can be found at [my wiki page](https://wiki.debian.org/KaichungYan).
 
 I am the lead developer and founder of [Viska](http://github.com/seamlik/libviska-java), an open-source XMPP client on Android with VoIP and end-to-end encryption. It's still under development (more precisely pre-production), though.
-
-Here are other ways to find me:
-
-  * Debian 👨‍💻: https://wiki.debian.org/KaichungYan
-  * Douban 📖🎦: https://www.douban.com/people/seamlik
-  * GitHub 👨‍💻: https://github.com/seamlik
-  * Goodreads 📖: https://www.goodreads.com/seamlik
-  * IMDb 🎦: http://www.imdb.com/user/ur58441413
-  * LinkedIn 👨‍💼: https://linkedin.com/in/seamlik (Hire me!)
-  * Steam 🎮: https://steamcommunity.com/id/seamlik
-  * Twister: @seamlik (Deprecated)
-  * Twitter 🐦: [@seamlik](https://twitter.com/seamlik)
 
 History of This Site
 ====================
