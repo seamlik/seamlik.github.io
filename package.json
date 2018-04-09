@@ -1,0 +1,19 @@
+{
+  "name": "seamlik-blog-github",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.7.0"
+  },
+  "dependencies": {
+    "hexo": "3.7.0",
+    "hexo-deployer-git": "*",
+    "hexo-generator-archive": "*",
+    "hexo-generator-feed": "*",
+    "hexo-generator-index": "*",
+    "hexo-renderer-ejs": "*",
+    "hexo-renderer-stylus": "*",
+    "hexo-renderer-marked": "*",
+    "hexo-server": "*"
+  }
+}

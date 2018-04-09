@@ -16,6 +16,13 @@ I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org
 
 I am the lead developer and founder of [Viska](http://github.com/seamlik/libviska-java), an open-source XMPP client on Android with VoIP and end-to-end encryption. It's still under development (more precisely pre-production), though.
 
+Other Ways to Find Me
+=====================
+
+* GitHub: https://github.com/seamlik
+* LinkedIn: https://linkedin.com/in/seamlik (Hire me!)
+* Twitter: [@seamlik](https://twitter.com/seamlik)
+
 History of This Site
 ====================
 
