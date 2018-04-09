@@ -10,8 +10,11 @@ comments = true
 favicon = "img/favicon.ico"
 logo = "img/logo.png"
 rss = true
+useHLJS = true
+socialShare = true
 
 [Author]
+facebook = "seamlik.yan"
 github = "seamlik"
 gitlab = "seamlik"
 linkedin = "seamlik"
