@@ -1,5 +1,5 @@
 author: "殷啟聰 | Kai-Chung Yan"
-permalink: post/:title.html
+permalink: blog/posts/:title.html
 title: Blog by seamlik
 url: https://seamlik.github.io
 disqus_shortname: seamlik-blog-github
