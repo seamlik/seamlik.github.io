@@ -29,7 +29,7 @@ We host all our code on Debian's infrastructure ([Alioth](https://anonscm.debian
 
 ## Learn to Maintain Debian Packages
 
-The `android-tools` team (our team 😉) is a packaging team in Debian, which means we maintain packages of a specific topic (in this case, Android). In order to contribute to the effort, you first need to learn to maintain Debian packages. There are already a number of tutorials out there, e.g. "[Debian New Maintainers' Guide](https://www.debian.org/doc/manuals/maint-guide)" and "[Ubuntu Packaging Guide](http://packaging.ubuntu.com/html)".
+The `android-tools` team (our team 😉) is a packaging team in Debian, which means we maintain packages of a specific topic (in this case, Android). In order to contribute to the effort, you first need to learn to maintain Debian packages. There are already a number of tutorials out there, e.g. "[Debian New Maintainers' Guide](https://www.debian.org/doc/manuals/maint-guide)", "[Guide for Debian Maintainers](https://www.debian.org/doc/manuals/debmake-doc/index.html)" and "[Ubuntu Packaging Guide](http://packaging.ubuntu.com/html)".
 
 Once you know how to write build scripts for Debian packages, you may try updating existing packages or make new ones and then look for a Debian member to sponsor it (upload it for you). For packages without a team, you need to file a "sponsorship request" [here](https://mentors.debian.net). But since Android SDK packages are maintained by our team, you should directly ask us to do the sponsoring.
 
@@ -41,6 +41,6 @@ The work needed to be done includes updating all packages to the latest Android 
 
 You can find more thorough information at the [wiki page](https://wiki.debian.org/AndroidTools).
 
-## Spread the Words!
+## Spread the Word!
 
 If you find Android SDK in Debian useful to your projects or your company, please provide us feedback. But it would be awesome if you start to help us with the packages! Do share the project with your friends and colleagues, so that we get more users and help!
