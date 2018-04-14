@@ -20,6 +20,7 @@ Other Ways to Find Me
 =====================
 
 * GitHub: https://github.com/seamlik
+* GitLab: https://gitLab.com/seamlik
 * LinkedIn: https://linkedin.com/in/seamlik (Hire me!)
 * Twitter: [@seamlik](https://twitter.com/seamlik)
 
