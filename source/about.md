@@ -32,3 +32,5 @@ When I fisrt started this blog I chose [LogDown](https://logdown.com). This was 
 So where should I go from here? I've got a domain (for my personal project), and there are loads of Markdown blogging engine that generates static sites, why not simply put them on AWS S3? Great idea. Unfortunately, for half a week I have been unable to finish up the stupid account verification, so I have to give up. Besides, hosting static websites on cloud object storage seems to be incompatible with a HTTPS custom domain. Therefore, I eventually chose GitHub Pages. It's free (costless), and the URL is nice and short, it'll do.
 
 I ended up using [Hugo](https://gohugo.io), a new static site generator written in Go. As far as I have used it, I like it. Hope this project keeps doing great job. 🤔
+
+Hugo had been serving me well, but unfortunately I later switched to use [Hexo](https://hexo.io). In fact, both projects are awesome, but I'm simply not a fan of Go, so... 😕
