@@ -1,6 +1,6 @@
 ---
 date: 2015-12-10T11:40:00+08:00
-title: What If XcodeGhost Hit Android...
+title: What If XcodeGhost Hits Android...
 ---
 
 ![](http://www.lo4d.com/i/award/Android%20SDK.png)
