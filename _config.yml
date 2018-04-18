@@ -9,10 +9,4 @@ deploy:
   branch: master
   repo: git@github.com:seamlik/seamlik.github.io.git
 
-theme: landscape
-theme_config:
-  favicon: img/favicon.ico
-  menu:
-    Home: /
-    Archives: /archives
-    About: /about.html
+theme: default
