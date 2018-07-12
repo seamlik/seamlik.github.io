@@ -3,14 +3,15 @@
     "version": "3.7.1"
   },
   "dependencies": {
-    "hexo": "3.7.1",
     "hexo-deployer-git": "",
     "hexo-generator-archive": "",
     "hexo-generator-feed": "",
     "hexo-generator-index": "",
     "hexo-renderer-ejs": "",
-    "hexo-renderer-stylus": "",
     "hexo-renderer-marked": "",
-    "hexo-server": ""
+    "hexo-renderer-scss": "",
+    "hexo-renderer-stylus": "",
+    "hexo-server": "",
+    "hexo": "3.7.1"
   }
 }

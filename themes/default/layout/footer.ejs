@@ -1,7 +1,9 @@
-<footer>
-  <nav>
-    <h4>Index</h4>
-    <ul>
+<footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading"><%- config.title %></h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
       <li class="nav-item">
         <a href="/">Home</a>
       </li>
@@ -13,9 +15,40 @@
       </li>
     </ul>
   </nav>
-  <hr class="nav-item"/>
-  <div>
-    <p class="nav-item">© 2018 <%= config.author %></p>
-    <p class="nav-item">Powered by <a href="https://hexo.io">Hexo</a></p>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://gitlab.com/seamlik">
+          <span class="fab fa-gitlab"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/seamlik">
+          <span class="fab fa-twitter"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
   </div>
+  <div class="footer-col footer-col-3">
+    <p>© 2018 <%= config.author %></p>
+    <p>Powered by <a href="https://hexo.io">Hexo</a></p>
+    <p>Theme by <a href="https://github.com/jekyll/minima">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
 </footer>

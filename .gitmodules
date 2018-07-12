@@ -1,0 +1,3 @@
+[submodule "themes/default/minima"]
+	path = themes/default/minima
+	url = https://github.com/jekyll/minima.git
