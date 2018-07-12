@@ -1,0 +1,24 @@
+body > footer {
+  background: #222;
+  padding: 0.5rem 2rem 1rem 2rem;
+}
+
+body > footer li {
+  list-style-type: none;
+}
+
+body > footer *.nav-item {
+  margin: 1.5rem 0;
+}
+
+body > footer ul {
+  padding: 0;
+}
+
+body > footer * {
+  color: white;
+}
+
+body > footer a {
+  color: #83d0f2;
+}
