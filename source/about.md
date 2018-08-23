@@ -7,22 +7,17 @@ My name is Kai-Chung Yan (殷啟聰). I am currently a college student from Comm
 
 I had never been maintaining a blog of my own before. I started this blog as promised to my Google Summer of Code mentor back in 2015 that I will start a blog and post my progress there publicly.
 
-Many thanks to the authors of Hugo and this elegant theme!
+Many thanks to the authors of Hexo and this elegant theme!
 
 What Do I Do?
 =============
 
 I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org/AndroidTools) and [pkg-java](https://pkg-java.alioth.debian.org) packaging teams. I mostly package software related to [Gradle](https://gradle.org) and Android SDK. More infomation can be found at [my wiki page](https://wiki.debian.org/KaichungYan).
 
-I am the lead developer and founder of [Viska](http://github.com/seamlik/libviska-java), an open-source XMPP client on Android with VoIP and end-to-end encryption. It's still under development (more precisely pre-production), though.
+I also maintain the following projects:
 
-Other Ways to Find Me
-=====================
-
-* GitHub: https://github.com/seamlik
-* GitLab: https://gitLab.com/seamlik
-* LinkedIn: https://linkedin.com/in/seamlik (Hire me!)
-* Twitter: [@seamlik](https://twitter.com/seamlik)
+* [Viska](http://github.com/seamlik/libviska-java): Extensible XMPP client library.
+* [Voidbuilder](https://salsa.debian.org/seamlik-guest/voidbuilder): `pbuilder` variant based on Docker
 
 History of This Site
 ====================
