@@ -1,0 +1,24 @@
+<head>
+  <%- partial('partial/head') %>
+  <title>Archives | Blog by seamlik</title>
+</head>
+<body>
+  <%- partial('partial/header') %>
+  <main class="page-content"><div class="wrapper">
+    <div class="home">
+      <ul class="post-list">
+        <% [...site.posts.data].sort((a, b) => a.date.isAfter(b.date) ? -1 : 1).forEach(it => { %>
+          <li>
+            <span class="post-meta"><%- it.date.format('LLL') %></span>
+            <h3>
+              <a class="post-link" href="<%= url_for(it.path) %>">
+                <%= it.title %>
+              </a>
+            </h3>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div></main>
+  <%- partial('partial/footer') %>
+</body>

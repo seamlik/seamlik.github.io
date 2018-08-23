@@ -8,4 +8,7 @@ deploy:
   branch: master
   repo: git@github.com:seamlik/seamlik.github.io.git
 
+feed:
+  type: atom
+
 theme: default
