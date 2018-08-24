@@ -3,7 +3,7 @@ date: 2016-03-04T14:51:00+08:00
 title: 'Attending FOSDEM 2016: First Touch in Open Source Community'
 ---
 
-![](https://farm2.staticflickr.com/1535/25443641715_a5995719e3_o_d.jpg)
+![](/assets/fosdem-classroom.jpg)
 
 FOSDEM 2016 happened at the end of January, but I have been too busy to write my first trip to an open source event.
 
@@ -15,4 +15,4 @@ One of the most interesting projects I saw during FOSDEM is [Ring](https://ring.
 
 At the end of FOSDEM I joined the volunteers to do the clean up. We cleaned all the buildings, restored the rooms and finally shared the dinner at the hall of K Building. I'm not a European so I didn't talk too much to them, but this is really an unforgettable experience. Hope I can join the next FOSDEM soon.
 
-![](https://farm2.staticflickr.com/1638/25443630435_0377a38fba_o_d.jpg)
+![](/assets/fosdem-hall-crowd.jpg)
