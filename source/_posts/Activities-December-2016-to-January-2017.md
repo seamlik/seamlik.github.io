@@ -5,8 +5,7 @@ title: My Open-Source Activities from December 2016 to January 2017
 
 I am such a lazy person that this post should have shown up a year ago... 🤧
 
-Debian
-======
+## Debian
 
 As my [previous post](/post/my-open-source-activities-in-september-2016) suggested, The Android SDK for Nougat is coming to Debian, and we did it. As of today, all SDK packages except for the target framework (`android.jar`) are updated to 7.0.0_r1, all of which have X86, ARM & MIPS builds. There is no plan to update them to 7.1.1 yet, though an `android-sdk-platform-25` will someday be done.
 
@@ -19,8 +18,7 @@ Honestly, updating the Gradle plugin was a messy task because it introduces seve
 
 Maybe I'll be the first warrior to package IntelliJ IDEA? 🤔 Hmm it's getting more and more scary. 🤧
 
-Other Projects
-==============
+## Other Projects
 
 In January, I started a [small project called "pom2classpath"](https://github.com/seamlik/pom2classpath) which generates a Class-Path list for a given Maven POM by scanning given Maven repositories. This may not sound attractive by typical Java software dstributor, but it greatly benefit Debian's Java packaging. Once you get the Class-Path, you can scan for the dependencies of a Debian package which largely automates the work of packaging a large Java package. So far, you need to manually summarize what package should be put in `d/control` when you are packaging a Gradle project, which is error-prone and a waste of time and energy.
 

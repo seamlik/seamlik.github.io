@@ -5,8 +5,7 @@ title: My Open-Source Activities from February to March 2017
 
 After I started focusing my energy on my [capstone project](https://viska.chat), fewer and fewer contents will be present in the subsequent posts.
 
-Android SDK in Debian
-=====================
+## Android SDK in Debian
 
 Now that a large portion of the Android SDK are already settled down inside Debian, we need to help Debian users make use of our them without breaking too many things. Hence, I hacked the Gradle Android Plugin in Debian a bit so that when it detects that Debian's Android SDK is being used, it does the following:
 
@@ -19,14 +18,12 @@ Besides the Gradle plugin we also wrote a Gradle init script that forces the bui
 
 You can find more information in a [mailing list post](https://lists.alioth.debian.org/pipermail/android-tools-devel/2017q1/002570.html) and [a post of Bits from Debian](https://bits.debian.org/2017/03/build-android-apps-with-debian.html).
 
-Other Debian Activities
-=======================
+## Other Debian Activities
 
   * Packaged [`libscout`](https://tracker.debian.org/pkg/libscout), a command line tool for scanning third party libraries used by an APK. Used already by F-Droid.
   * Packaged [`libsmali-1-java`](https://tracker.debian.org/pkg/libsmali-1-java) for `libscout`.
   * Packaged [`wala`](https://tracker.debian.org/pkg/wala) which would be used by Jack. But following the [deprecation of Jack](https://android-developers.googleblog.com/2017/03/future-of-java-8-language-feature.html), I can stop chasing it now.
 
-Viska
-=====
+## Viska
 
 My capstone project Viska is an Android XMPP client with VoIP, and WebRTC became my first choice because of its ever trend. Turns out the reference implementation (by Google) has built-in support for Android and the codebase is huge and not fast to compile (just like Google's other products), I opened up a [repository on GitLab](https://gitlab.com/seamlik/prebuilts-webrtc-android) providing prebuilt binaries including Javadoc of the WebRTC SDK for Android.
