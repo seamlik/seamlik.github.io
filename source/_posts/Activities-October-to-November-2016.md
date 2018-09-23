@@ -1,6 +1,6 @@
 ---
 date: 2016-12-01T14:39:00+08:00
-title: My Open Source Activities from October to November 2016
+title: My Open-Source Activities from October to November 2016
 ---
 
 I did not finish too many significant jobs in the last 2 months, so I am combining them into one post. So far I still only work in Debian, but my (would-be) personal open source project [Viska](https://github.com/seamlik/viska-android) has started its conceptional stage, although there is not much effort spent in it yet.
