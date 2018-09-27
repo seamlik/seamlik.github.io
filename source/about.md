@@ -1,5 +1,4 @@
 ---
-comments: false
 title: About Kai-Chung Yan and This Site
 ---
 
@@ -12,9 +11,9 @@ Many thanks to the authors of Hexo and this elegant theme!
 What Do I Do?
 =============
 
-I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org/AndroidTools) and [pkg-java](https://pkg-java.alioth.debian.org) packaging teams. I mostly package software related to [Gradle](https://gradle.org) and Android SDK. More infomation can be found at [my wiki page](https://wiki.debian.org/KaichungYan).
+I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org/AndroidTools) and [pkg-java](https://pkg-java.alioth.debian.org) packaging teams. I mostly maintain packages related to [Gradle](https://gradle.org) and Android SDK. More infomation can be found at [my wiki page](https://wiki.debian.org/KaichungYan).
 
-I also maintain the following projects:
+I also work on the following projects:
 
 * [Voidbuilder](https://salsa.debian.org/seamlik-guest/voidbuilder): `pbuilder` variant based on Docker
 
