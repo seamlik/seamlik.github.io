@@ -16,7 +16,6 @@ I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org
 
 I also maintain the following projects:
 
-* [Viska](http://github.com/seamlik/libviska-java): Extensible XMPP client library.
 * [Voidbuilder](https://salsa.debian.org/seamlik-guest/voidbuilder): `pbuilder` variant based on Docker
 
 History of This Site
