@@ -2,23 +2,23 @@
 title: About Kai-Chung Yan and This Site
 ---
 
-My name is Kai-Chung Yan (殷啟聰). I am currently a college student from Communist Empire of China 🇨🇳 majoring computer science. I love using and working with open-source software.
-
-I had never been maintaining a blog of my own before. I started this blog as promised to my Google Summer of Code mentor back in 2015 that I will start a blog and post my progress there publicly.
+My name is Kai-Chung Yan (殷啟聰). I am a college student born in somewhere terrifying. I love using and working on open-source software.
 
 Many thanks to the authors of Hexo and this elegant theme!
 
 What Do I Do?
-=============
+-------------
 
-I am a Debian Maintainer and a member of [android-tools](https://wiki.debian.org/AndroidTools) and [pkg-java](https://pkg-java.alioth.debian.org) packaging teams. I mostly maintain packages related to [Gradle](https://gradle.org) and Android SDK. More infomation can be found at [my wiki page](https://wiki.debian.org/KaichungYan).
+I am a Debian Developer. More infomation can be found at [my wiki page](https://wiki.debian.org/KaichungYan).
 
 I also work on the following projects:
 
 * [Voidbuilder](https://salsa.debian.org/seamlik-guest/voidbuilder): `pbuilder` variant based on Docker
 
 History of This Site
-====================
+--------------------
+
+I had never been maintaining a blog of my own before. I started this blog as promised to my Google Summer of Code mentor back in 2015 that I will start a blog and post my progress there publicly.
 
 When I fisrt started this blog I chose [LogDown](https://logdown.com). This was a very cool platform made in Taiwan that lets you blog in Markdown. And most importantly, it offered a free plan! However, probably just because of this, the platform someday started to show errors like missing logo on the site, and there never was new features comming up. What was worse, there seemed to be no one answering my questions through that (probably fake) customer service chat. So, I gave up. Maybe oneday this company just vanishes.
 
