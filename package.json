@@ -3,6 +3,7 @@
     "version": "3.8.0"
   },
   "dependencies": {
+    "hexo": "3.8.0",
     "hexo-deployer-git": "",
     "hexo-generator-archive": "",
     "hexo-generator-feed": "",
@@ -11,7 +12,6 @@
     "hexo-renderer-marked": "",
     "hexo-renderer-scss": "",
     "hexo-renderer-stylus": "",
-    "hexo-server": "",
-    "hexo": "3.8.0"
+    "hexo-server": ""
   }
 }
