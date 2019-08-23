@@ -1,5 +1,5 @@
 ---
-date: 2016-10-02T10:42:00+08:00
+date: 2016-10-02T02:42:00
 title: My Open-Source Activities in September 2016
 ---
 

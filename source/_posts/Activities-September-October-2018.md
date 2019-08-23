@@ -1,6 +1,6 @@
 ---
 title: My Open-Source Activities from September to October 2018
-date: 2018-11-06T19:49:37+08:00
+date: 2018-11-06T11:49:37
 ---
 
 Welcome readers, this is a infrequently updated post series that logs my activities within open-source communities. I want my work to be as transparent as possible in order to promote open governance, a policy feared even by some “mighty” nations.

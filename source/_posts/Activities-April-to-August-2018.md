@@ -1,6 +1,6 @@
 ---
 title: My Open-Source Activities from April to August 2018
-date: 2018-09-24T04:27:52+08:00
+date: 2018-09-23T20:27:52
 ---
 
 Welcome readers, this is a infrequently updated post series that logs my activities within open-source communities. I want my work to be as transparent as possible in order to promote open governance, a policy feared even by some "mighty" nations.

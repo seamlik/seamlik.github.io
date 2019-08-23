@@ -4,21 +4,25 @@
 </head>
 <body>
   <%- partial('partial/header') %>
-  <main class="page-content"><div class="wrapper">
-    <div class="home">
-      <ul class="post-list">
-        <% [...site.posts.data].sort((a, b) => a.date.isAfter(b.date) ? -1 : 1).forEach(it => { %>
+  <main class="page-content">
+    <div class="wrapper">
+      <div class="home">
+        <ul class="post-list">
+          <% [...site.posts.data].sort((a, b) => a.date.isAfter(b.date) ? -1 : 1).forEach(it => { %>
           <li>
-            <span class="post-meta"><%- it.date.format('LLL') %></span>
+            <time class="post-meta x-late-timestamp"><%- it.date.format('x') %></time>
             <h3>
               <a class="post-link" href="<%= url_for(it.path) %>">
                 <%= it.title %>
               </a>
             </h3>
           </li>
-        <% }) %>
-      </ul>
+          <% }) %>
+        </ul>
+      </div>
     </div>
-  </div></main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/assets/late-timestamps.js"></script>
+  </main>
   <%- partial('partial/footer') %>
 </body>
