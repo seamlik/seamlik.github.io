@@ -15,7 +15,7 @@ I am a Debian Developer. More infomation can be found at [my wiki page](https://
 
 I also work on the following projects:
 
-* [Voidbuilder](https://salsa.debian.org/seamlik-guest/voidbuilder): `pbuilder` variant based on Docker
+* [Voidbuilder](https://www.npmjs.com/package/voidbuilder): `pbuilder` variant based on Docker
 
 History of This Site
 --------------------
