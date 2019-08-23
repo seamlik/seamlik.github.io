@@ -15,7 +15,7 @@ The repository contains files that sets up [`cowbuilder`](https://wiki.debian.or
 
 I spent several weeks writing some additional tools for the existing [`maven-repo-helper`](https://tracker.debian.org/pkg/maven-repo-helper). The package now contains 2 tools:
 
-* `mh_shlibdeps`: Like `dh_shlibdeps` but for Maven artifacts, successor to `mh_resolve_dependencies` 
+* `mh_shlibdeps`: Like `dh_shlibdeps` but for Maven artifacts, successor to `mh_resolve_dependencies`
 * `mh_genlauncher`: Generate simple launcher scripts for Java programs distributed as Maven artifacts.
 
 The package name is likely to be changed, and `mh_genlauncher` is likely to be replaced by something neater. Still waiting for other core devs in `pkg-java` team to review it.
