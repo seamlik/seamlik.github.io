@@ -12,6 +12,7 @@
     "hexo-renderer-marked": "",
     "hexo-renderer-scss": "",
     "hexo-renderer-stylus": "",
-    "hexo-server": ""
+    "hexo-server": "",
+    "node-sass": "^4.12.0"
   }
 }
