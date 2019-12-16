@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Contribute to Android SDK in Debian | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">How to Contribute to Android SDK in Debian</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1505032929000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p><strong>A bit of background</strong>: This article was written to provide freshman guide for students who was applying for the <a href="https://wiki.debian.org/Outreachy/Round15/Projects#Outreachy.2FRound15.2FProjects.2FAndroidSDKToolsInDebian.Android_SDK_Tools_in_Debian" target="_blank" rel="noopener">“Android SDK Tools in Debian” project</a> in <a href="https://outreachy.org" target="_blank" rel="noopener">Outreachy</a>.</p>
+<p>Android SDK is available <a href="https://packages.debian.org/source/sid/android-sdk-meta" target="_blank" rel="noopener">in Debian</a>. With these tools, Android developers are able to build their apps with pure open source software that has neither limitation on usage nor probable scary backdoors. However the packages are usually out-of-date and do not cover all components of the SDK due to the huge size of AOSP and a lack manpower. If you are interested in help us, you may find this article helpful.</p>
+<p>This isn’t a detailed tutorial. Instead, it’s a guide for you to know about the overall workflow and where to start.</p>
+<h2 id="Where-to-Find-Us"><a href="#Where-to-Find-Us" class="headerlink" title="Where to Find Us"></a>Where to Find Us</h2><p>You can find some information about the team <a href="https://wiki.debian.org/Teams/AndroidTools" target="_blank" rel="noopener">here</a>. IRC and mailing list are how we communicate mostly.</p>
+<h3 id="IRC"><a href="#IRC" class="headerlink" title="IRC"></a>IRC</h3><p>IRC is a kind of anonymous group chat technology invented a great many years ago. It is the preferred way of meeting for surprisingly most of the open source projects in the world. In order to join an IRC channel, use any IRC client (e.g. <a href="https://wiki.gnome.org/Apps/Polari" target="_blank" rel="noopener">Polaris</a> and <a href="https://irccloud.com" target="_blank" rel="noopener">IRCCloud</a>) to login an IRC server, choose a nickname, then you can enter a channel you find interested.</p>
+<p>Debian has an official IRC server (which is actually <a href="https://oftc.net" target="_blank" rel="noopener">OFTC</a>): <code>irc.debian.org</code>. You can find us in the <code>#debian-mobile</code> and <code>#debian-android-tools</code> channels. We usually talk in the first one and check out Git repository notifications in the second one. My nickname is <code>seamlik</code>, and <code>_hc</code> is the team founder.</p>
+<h3 id="Mailing-list"><a href="#Mailing-list" class="headerlink" title="Mailing list"></a>Mailing list</h3><p>In case you don’t already know what an mailing list is, imagine it’s also a group chat platform but for emails. Any email address that subscribe to the list address will receive all emails sent to the list address. Our team also has a mailing list where we make announcements and discussions that we prefer to be publicly recorded. Visit the <a href="https://lists.alioth.debian.org/cgi-bin/mailman/listinfo/android-tools-devel" target="_blank" rel="noopener">mailing list webpage</a> to subscribe to it.</p>
+<h3 id="Git-Repositories"><a href="#Git-Repositories" class="headerlink" title="Git Repositories"></a>Git Repositories</h3><p>We host all our code on Debian’s infrastructure (<a href="https://anonscm.debian.org/cgit/android-tools" target="_blank" rel="noopener">Alioth</a>, though it is <a href="https://wiki.debian.org/Alioth/GitNext" target="_blank" rel="noopener">being replaced</a> at the time). There are also <a href="https://github.com/debian-pkg-android-tools" target="_blank" rel="noopener">mirrors</a> on GitHub, though we do not accept pull request there because that would be beyond Debian’s workflow.</p>
+<h2 id="Learn-to-Maintain-Debian-Packages"><a href="#Learn-to-Maintain-Debian-Packages" class="headerlink" title="Learn to Maintain Debian Packages"></a>Learn to Maintain Debian Packages</h2><p>The <code>android-tools</code> team (our team 😉) is a packaging team in Debian, which means we maintain packages of a specific topic (in this case, Android). In order to contribute to the effort, you first need to learn to maintain Debian packages. There are already a number of tutorials out there, e.g. “<a href="https://www.debian.org/doc/manuals/maint-guide" target="_blank" rel="noopener">Debian New Maintainers’ Guide</a>“, “<a href="https://www.debian.org/doc/manuals/debmake-doc/index.html" target="_blank" rel="noopener">Guide for Debian Maintainers</a>“ and “<a href="http://packaging.ubuntu.com/html" target="_blank" rel="noopener">Ubuntu Packaging Guide</a>“.</p>
+<p>Once you know how to write build scripts for Debian packages, you may try updating existing packages or make new ones and then look for a Debian member to sponsor it (upload it for you). For packages without a team, you need to file a “sponsorship request” <a href="https://mentors.debian.net" target="_blank" rel="noopener">here</a>. But since Android SDK packages are maintained by our team, you should directly ask us to do the sponsoring.</p>
+<h2 id="An-Overview-of-Our-Packages"><a href="#An-Overview-of-Our-Packages" class="headerlink" title="An Overview of Our Packages"></a>An Overview of Our Packages</h2><p>The entire source code of the SDK is part of AOSP and we basically fetch the source code from it and build the toolset using handwritten <code>Makefiles</code>. Since AOSP is a gigantic project with the size of 200+ GiB, it is improper and maybe impossible to make it as a single source package in Debian. We therefore consider a single Git repository of AOSP as the basic unit of one source package in Debian and clarify the relationship to the AOSP repository in the source package name. Take <a href="https://packages.debian.org/source/unstable/android-platform-system-core" target="_blank" rel="noopener"><code>android-platform-system-core</code></a> for example, its source code corresponds to <a href="https://android.googlesource.com/platform/system/core" target="_blank" rel="noopener"><code>platform/system/core</code></a>.</p>
+<p>The work needed to be done includes updating all packages to the latest Android release, packaging missing parts of the SDK and improve the <a href="https://packages.debian.org/sid/android-sdk-helper" target="_blank" rel="noopener">helper tools</a> that build Android apps on Debian. These are the top priorities.</p>
+<p>You can find more thorough information at the <a href="https://wiki.debian.org/AndroidTools" target="_blank" rel="noopener">wiki page</a>.</p>
+<h2 id="Spread-the-Word"><a href="#Spread-the-Word" class="headerlink" title="Spread the Word!"></a>Spread the Word!</h2><p>If you find Android SDK in Debian useful to your projects or your company, please provide us feedback. But it would be awesome if you start to help us with the packages! Do share the project with your friends and colleagues, so that we get more users and help!</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities from September to October 2018 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities from September to October 2018</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1541504977000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>Welcome readers, this is a infrequently updated post series that logs my activities within open-source communities. I want my work to be as transparent as possible in order to promote open governance, a policy feared even by some “mighty” nations.</p>
+<p>I do not work on open-source full-time, although I sincerely would love to. Therefore the posts may cover a ridiculously long period (even a whole year).</p>
+<p>Unfortunately this blog site does not support commenting. So if anyone has anything to discuss regarding the posts, feel free to reach me via the social links at the footer of the page.</p>
+<h2 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h2><p>Debian is a general-purpose Linux distribution that is widely used on the planet. I am currently a Debian Maintainer who works on packages related to Android SDK and the Java ecosystem.</p>
+<ul>
+<li>Continued the updating of Android SDK family to Oreo<ul>
+<li>Uploaded <a href="https://tracker.debian.org/news/997858" target="_blank" rel="noopener"><code>android-platform-build</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/997840" target="_blank" rel="noopener"><code>android-platform-dalvik</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/995608" target="_blank" rel="noopener"><code>android-platform-development</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/994109" target="_blank" rel="noopener"><code>android-platform-frameworks-base</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/964503" target="_blank" rel="noopener"><code>android-platform-libcore</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/999760" target="_blank" rel="noopener"><code>android-platform-libnativehelper</code></a></li>
+<li>Uploaded <code>android-platform-system-core</code> providing <a href="https://tracker.debian.org/news/987521" target="_blank" rel="noopener">ADB</a> and <a href="https://tracker.debian.org/news/997309" target="_blank" rel="noopener"><code>fastboot</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/995237" target="_blank" rel="noopener"><code>android-platform-system-extras</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/994805" target="_blank" rel="noopener"><code>android-platform-system-tools-aidl</code></a></li>
+</ul>
+</li>
+<li>All Android SDK packages of Oreo release are now in Unstable</li>
+</ul>
+<h3 id="Some-Android-SDK-Packages-Now-Available-on-Every-Architecture"><a href="#Some-Android-SDK-Packages-Now-Available-on-Every-Architecture" class="headerlink" title="Some Android SDK Packages Now Available on Every Architecture"></a>Some Android SDK Packages Now Available on Every Architecture</h3><p>For a long time our packages are only available on x86, ARM and MIPS architectures. This is due to the fact that AOSP is only designed to support those 3 major instruction sets in the market. Another physical limitation is that <a href="https://android.googlesource.com/platform/external/libunwind" target="_blank" rel="noopener"><code>libunwind</code></a>, a common dependency by most Android SDK components, can only be built on said architectures after being patched by AOSP. ADB and <code>fastboot</code> now even removed the support on MIPS because we now build them against <a href="https://boringssl.googlesource.com/boringssl" target="_blank" rel="noopener">BoringSSL</a> which does not support MIPS at all. In light of the <a href="https://github.com/android-ndk/ndk/wiki/Changelog-r17" target="_blank" rel="noopener">removal of MIPS support in NDK</a> as well, I can assume that the entire AOSP will say goodbye to MIPS at some point.</p>
+<p>But not all components rely on <code>libunwind</code>. With some minor efforts and investigations, we can now enable some of them to build on every architecture that Debian supports. For now they include:</p>
+<ul>
+<li><a href="https://packages.debian.org/unstable/android-sdk-libsparse-utils" target="_blank" rel="noopener"><code>android-sdk-libsparse-utils</code></a></li>
+<li><a href="https://packages.debian.org/unstable/hprof-conv" target="_blank" rel="noopener"><code>hprof-conv</code></a></li>
+</ul>
+<p>There will surely be more on the road, stay tuned.</p>
+<h3 id="DD-Application-Approved"><a href="#DD-Application-Approved" class="headerlink" title="DD Application Approved"></a>DD Application Approved</h3><p>For those who aren’t familiar with the term, DD means Debian Developer who are official member of the Debian Project and usually have access and permissions to most parts of Debian’s infrastructure.</p>
+<p>As a Debian Maintainer (DM), I can ask for upload permission on any packages and upload them without needing a sponsor. But in case of introducing new binary packages or hijacking ones from another source package I will need a sponsor. I believe with a DD account working in Debian will become smoother and easier.</p>
+<p>So I <a href="https://nm.debian.org/process/479" target="_blank" rel="noopener">applied</a> for DD about… 6 months ago! After a marathon of Q&amp;A sessions I finally got approved by my AM Joerg Jaspert. Now I still have to wait for further review by the system, perhaps I can get the account in November.</p>
+<p>Big thanks to Hans-Christoph Steiner, Markus Koschany and Emmanuel Bourg who advocated me, and my AM Joerg Jaspert.</p>
+<h2 id="Voidbuilder-Release-0-2-0"><a href="#Voidbuilder-Release-0-2-0" class="headerlink" title="Voidbuilder Release 0.2.0"></a>Voidbuilder Release 0.2.0</h2><p><a href="https://www.npmjs.com/package/voidbuilder" target="_blank" rel="noopener">Voidbuilder</a> is a simple program that mimics <a href="https://packages.debian.org/sid/pbuilder" target="_blank" rel="noopener"><code>pbuilder</code></a> but uses <a href="https://docker.com" target="_blank" rel="noopener">Docker</a> as the isolation engine. I have been using it privately and am quite satisfied.</p>
+<p>Last month I released a 0.2.0 version with the following changes:</p>
+<ul>
+<li>The <code>login</code> sub-command no longer builds the source-only bundle and this task must be done by the user.</li>
+<li>One failed hook no longer fail the entire job, instead a message will pop up.</li>
+</ul>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

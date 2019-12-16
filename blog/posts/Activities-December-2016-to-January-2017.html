@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities from December 2016 to January 2017 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities from December 2016 to January 2017</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1488097355000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>I am such a lazy person that this post should have shown up a year ago… 🤧</p>
+<h2 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h2><p>As my <a href="/post/my-open-source-activities-in-september-2016">previous post</a> suggested, The Android SDK for Nougat is coming to Debian, and we did it. As of today, all SDK packages except for the target framework (<code>android.jar</code>) are updated to 7.0.0_r1, all of which have X86, ARM &amp; MIPS builds. There is no plan to update them to 7.1.1 yet, though an <code>android-sdk-platform-25</code> will someday be done.</p>
+<p>Other notable activities include:</p>
+<ul>
+<li>Uploaded a new package <a href="https://tracker.debian.org/pkg/android-platform-tools-analytics-library" target="_blank" rel="noopener"><code>android-platform-tools-analytics-library</code></a>.</li>
+<li>Updated <a href="https://tracker.debian.org/pkg/android-platform-tools-base" target="_blank" rel="noopener"><code>android-platform-tools-base</code></a> to 2.2.2. This package provides the ofiicial Gradle plugin for building Android apps.</li>
+</ul>
+<p>Honestly, updating the Gradle plugin was a messy task because it introduces several big dependencies including the core library of IntelliJ IDEA! Since at that time Debian has entered soft freeze, which means no new packages will be accepted automatically into Stretch, we had to bundle those third party sources into this package. Someday I’m gonna split them into separated packages, otherwise it will be very ugly.</p>
+<p>Maybe I’ll be the first warrior to package IntelliJ IDEA? 🤔 Hmm it’s getting more and more scary. 🤧</p>
+<h2 id="Other-Projects"><a href="#Other-Projects" class="headerlink" title="Other Projects"></a>Other Projects</h2><p>In January, I started a <a href="https://github.com/seamlik/pom2classpath" target="_blank" rel="noopener">small project called “pom2classpath”</a> which generates a Class-Path list for a given Maven POM by scanning given Maven repositories. This may not sound attractive by typical Java software dstributor, but it greatly benefit Debian’s Java packaging. Once you get the Class-Path, you can scan for the dependencies of a Debian package which largely automates the work of packaging a large Java package. So far, you need to manually summarize what package should be put in <code>d/control</code> when you are packaging a Gradle project, which is error-prone and a waste of time and energy.</p>
+<p>Additionally, you can even simply write an extremelt minimalist launcher script when packaging a Java executable program without storing the Class-Path in the JARs. There has to be just one line in this launcher script: <code>pom2classpath /usr/share/maven-repo/com/foo/1.0/foo-1.0.pom</code>. Cool! 😎</p>
+<p>After some testings I’ll put it in Debian and start hacking maven-repo-helper so that it generates dependencies to <code>substvars</code> files.</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

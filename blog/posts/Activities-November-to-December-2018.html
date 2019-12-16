@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities from November to December 2018 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities from November to December 2018</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1548055663000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>Welcome, reader! This is a infrequently updated post series that logs my activities within open-source communities. I want my work to be as transparent as possible in order to promote open governance, a policy feared even by some “mighty” nations.</p>
+<p>I do not work on open-source full-time, although I sincerely would love to. Therefore the posts may cover a ridiculously long period (even a whole year).</p>
+<h2 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h2><p>Debian is a general-purpose Linux distribution that is widely used on the planet. I am a Debian Developer who works on packages related to Android SDK and the Java ecosystem.</p>
+<p>After a month of hardwork, I finally finished the packaging of <a href="https://tracker.debian.org/pkg/android-platform-art" target="_blank" rel="noopener"><code>android-platform-art</code></a>. The tricky part was that this package is the first of our Android SDK packages that fails to build using GCC, which was realized only after I had patched an awful lot of code.</p>
+<p>Other activities include:</p>
+<ul>
+<li>Many changes to <code>android-platform-system-core</code> (<a href="https://tracker.debian.org/news/1001030/accepted-android-platform-system-core-1810r23-2-source-amd64-all-into-unstable-unstable/" target="_blank" rel="noopener">1:8.1.0+r23-2</a> <a href="https://tracker.debian.org/news/1003371/accepted-android-platform-system-core-1810r23-3-source-into-unstable/" target="_blank" rel="noopener">1:8.1.0+r23-3</a> <a href="https://tracker.debian.org/news/1008061/accepted-android-platform-system-core-1810r23-4-source-into-unstable/" target="_blank" rel="noopener">1:8.1.0+r23-4</a>) and now it builds on kFreeBSD!</li>
+<li>Finally got my Debian account.</li>
+</ul>
+<h2 id="Voidbuilder-Release-0-3-0"><a href="#Voidbuilder-Release-0-3-0" class="headerlink" title="Voidbuilder Release 0.3.0"></a>Voidbuilder Release 0.3.0</h2><p><a href="https://www.npmjs.com/package/voidbuilder" target="_blank" rel="noopener">Voidbuilder</a> is a simple program that mimics <a href="https://packages.debian.org/sid/pbuilder" target="_blank" rel="noopener"><code>pbuilder</code></a> but uses <a href="https://docker.com" target="_blank" rel="noopener">Docker</a> as the container engine. I have been using it privately and am quite satisfied.</p>
+<p>I released <a href="https://salsa.debian.org/seamlik/voidbuilder/blob/master/CHANGELOG.md#030-2018-12-15" target="_blank" rel="noopener">0.3.0</a> in December. A notable change is that it now prints the build result in details, just like <code>sbuild</code> does.</p>
+<h2 id="Other-Activities"><a href="#Other-Activities" class="headerlink" title="Other Activities"></a>Other Activities</h2><p>Pushed a <a href="https://android-review.googlesource.com/c/platform/tools/base/+/852369" target="_blank" rel="noopener">patch</a> to AOSP that removes a SUN API usage for Base64. Now let’s see if it will get accepted in 10 years… 😪</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

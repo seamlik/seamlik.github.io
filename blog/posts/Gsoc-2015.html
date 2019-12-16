@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Summer of Code Started: Packaging Android SDK for Debian | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">Google Summer of Code Started: Packaging Android SDK for Debian</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1431927660000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p><img src="http://1-ps.googleusercontent.com/xk/lUi00NOiZZtaYcm5-HDw_Ypz0k/s.google-melange.appspot.com/www.google-melange.com/soc/content/2-1-20150429/images/gsoc/logo/banner-gsoc2015.png.pagespeed.ce.1-XG35qq3RQ2RCHp3uFT.png" alt=""></p>
+<p>And here it is: I am accepted as a GSoC 2015 student! Actually this has been a while since the result was out in the end of April. When I was applying for this GSoC, I never expected I could be accepted.</p>
+<p>So what is Google Summer of Code, in case someone hasn’t heard about it at all? Google Summer of Code is an annual activity hosted by Google which gathers college students around the world to contribute to open source softwares. Every year hundreds of open source organizations join GSoC to provide project ideas and mentors, and thousands of students apply to and choose a project and work on it during the summer, and get well paid by Google if they manage to finish the task. This year we have 1051 students accepted with 49 from China and 2 from Taiwan. You can read more details from <a href="http://google-opensource.blogspot.com/2015/05/gsoc-2015-stats-part-1-all-about.html" target="_blank" rel="noopener">this post</a>.</p>
+<p>Although it says so from Geography textbooks and my Geography teacher, I had been not believing that India is a software giant, until I saw that India has the most students accepted and my partner on this project is a girl from India!</p>
+<h2 id="Project-Details"><a href="#Project-Details" class="headerlink" title="Project Details"></a>Project Details</h2><p>The project we will work on this summer is to package Android SDK into Debian. In addition to that, we wil also update the existing packages that is essential to Android development, e.g. Gradle. Although some may say this project is not quite complicated, it still has lots of work to do, which makes it a rather large project that has two students working on it and a co-mentor. My primary mentor is Hans-Christoph Steiner from The Guardian Project and he also wrote a <a href="https://guardianproject.info/2015/04/30/getting-android-tools-into-debian/" target="_blank" rel="noopener">post</a> about the project.</p>
+<p>Why do we need to do this? There are reasons on security, convenience and ideal, but the biggest one for me is that if you use Linux and you write Android apps, or perhaps you are just ready to flash your device a CyanogenMod, there will be no better way than to just type <code>sudo aptitude install adb</code>. More infomation on this project can be found on <a href="http://wiki.debian.org/AndroidTools" target="_blank" rel="noopener">Debian’s Android Tools Team page</a>.</p>
+<h2 id="Problems-We-Are-Facing"><a href="#Problems-We-Are-Facing" class="headerlink" title="Problems We Are Facing"></a>Problems We Are Facing</h2><p>Currently (mid May) the offical beginning of coding phase has not yet arrived, but we have made a meeting on IRC and confirmed the largest problems we have so far.</p>
+<p>The first problem is the packaging of Gradle. Gradle is a rather new and innovating build automation system, with which most Android apps and the Android SDK tools written in Java are built. It is a building system, so unsurprisingly it is built with itself. In this case, updating Gradle is much harder. Currently Gradle is version 2.4 but the one in Debian is 1.5. In the worst cases, we have to build all versions of Gradle from 1.6 to 2.4 one by one due to its self-dependency.</p>
+<p>In reality, building a project with Gradle is way more easier and happier than any other build system because it handles the dependency in a brilliant way by downloading everything it needs, including Gradle itself. Thus it does not matter if you have installed Gradle or even if you are using Linux or Windows. However when building the Debian package, it seems that we have to abandoned the convenience and make it totally offline and rely only on the things in Debian. This is for security and reproducibility but the packaging will be much more complicated since we have to modify lots of code in the build scripts from upstream source. Also in such case, since the building is restricted to rely on the existing things in a Debian system, quite a few plugins that uses softwares that isn’t in Debian yet will be excluded from the Debian version of Gradle, which makes it less usable than simply launching the Gradle wrapper. In that case, I suppose there will be very few people really using the Gradle in Debian repository.</p>
+<p>The second problem is how to determine which Git commit we should checkout from the Android SDK repository to build a particular version of the tools. Android SDK does not release its source code in tarball form, so we have to deal with the Git repository. What’s worse, the tools in Android SDK come from different repositories, and they have almost no infomation on the tools’ version number at all. We can’t confirm which commit or tag or branch in the repository corresponds to a particular version. And what’s way worse, Android SDK has 3 parts being SDK-tools, Build-tools and Platform-tools, each of which has defferent version numbers! And what’s way way worse, I have posted the question to various places and no one had answered me.</p>
+<p>After our IRC discussion, we have been focusing on Gradle. I am still reading documentations about Debian packaging and using Gradle. All I hope now is that we can finish the project nice and fast and no pity will be left in this summer. Also I hope my GSoC T-shirt will be delivered to my home as soon as possible, it’s really cool!</p>
+<h1 id="Do-You-Want-to-Join-GSoC-as-Well"><a href="#Do-You-Want-to-Join-GSoC-as-Well" class="headerlink" title="Do You Want to Join GSoC as Well?"></a>Do You Want to Join GSoC as Well?</h1><p>Surprisingly, most students in my school haven’t heard about Google Summer of Code at all, that is why there are only 2 accepted students from Taiwan. But if you know it and you study computer science (or in other ridiculous department related to computer science just like mine), do not hesitate and join the next year’s! Contribute to open source, and get highly paid (5500 USD this year), is it not really cool? Here I am offering you several tips.</p>
+<p>Before I applied my proposal, I saw a guy from KDE wrote <a href="http://teom.org/blog/kde/how-to-write-a-kick-ass-proposal-for-google-summer-of-code/" target="_blank" rel="noopener">some tips with a shocking title</a>. Reading that is enough I guess, but I still need to list some points:</p>
+<ul>
+<li>Contact your potantial mentors even before you are writing your proposal, that really helps.</li>
+<li>Remember to include a rough schedule in your proposal, it is very important.</li>
+<li>Be interative to your mentor, ask good questions often.</li>
+</ul>
+<p>Have fun in the summer!</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

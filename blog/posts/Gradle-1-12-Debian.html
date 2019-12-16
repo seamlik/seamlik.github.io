@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introducing Gradle 1.12 in Debian | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">Introducing Gradle 1.12 in Debian</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1435527660000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p><img src="http://gradle.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/gradlephant-291x300.png" alt=""></p>
+<p>After 5 weeks of work, my colleague Komal Sukhani and I succeeded in bringing Gradle 1.12 with other packages into Debian. Here is a brief note of what we’ve done:</p>
+<ul>
+<li>Gradle updated to <a href="https://packages.debian.org/source/experimental/gradle" target="_blank" rel="noopener">gradle_1.12-1</a></li>
+<li>Groovy updated to <a href="https://packages.debian.org/source/experimental/groovy2" target="_blank" rel="noopener">groovy2_2.4.3+dfsg-1</a></li>
+<li>native-platform updated to <a href="https://packages.debian.org/source/sid/libnative-platform-java" target="_blank" rel="noopener">libnative-platform-java_0.10+dfsg-1</a></li>
+<li>New package: <a href="https://packages.debian.org/source/sid/bintray-client-java" target="_blank" rel="noopener">bintray-client-java_0.8.1-1</a></li>
+</ul>
+<p>Note that both Gradle and Groovy are in experimental distribution because Groovy build-depends on Gradle, and Gradle build-depends on bnd 2.1.0, which is in experimental as well.</p>
+<p>Updating these packages takes us an entire month because my summer vacation had not come yet until the day we uploaded Gradle and Groovy, which means we were doing the job in our spare time (Sukhani finished her semester at the beginning though).</p>
+<p>Next step is to update Gradle to 2.4 as soon as possible because Sukhani has started her work on the Java part of Android SDK, which requires Gradle 2.2 or above. Before updating Gradle I need to package the Java SDK for AWS, which enables Gradle to access S3 resources. I also need to make gradle-1.12 as a separate package and use it to build gradle_2.4-1.</p>
+<p>After that, I will start my work on the C/C++ part of Android SDK, which is far more complicated and messy than I had expected. Yet I enjoy the summer coding. Happy coding, all open source developers!</p>
+<p>Finally, feel free to check out my weekly report in Debian’s mailing list:</p>
+<ul>
+<li>Week 1: <a href="http://lists.alioth.debian.org/pipermail/soc-coordination/2015-May/002462.html" target="_blank" rel="noopener">http://lists.alioth.debian.org/pipermail/soc-coordination/2015-May/002462.html</a></li>
+<li>Week 2: <a href="http://lists.alioth.debian.org/pipermail/soc-coordination/2015-June/002482.html" target="_blank" rel="noopener">http://lists.alioth.debian.org/pipermail/soc-coordination/2015-June/002482.html</a></li>
+<li>Week 3: <a href="http://lists.alioth.debian.org/pipermail/soc-coordination/2015-June/002509.html" target="_blank" rel="noopener">http://lists.alioth.debian.org/pipermail/soc-coordination/2015-June/002509.html</a></li>
+<li>Week 4: <a href="http://lists.alioth.debian.org/pipermail/soc-coordination/2015-June/002524.html" target="_blank" rel="noopener">http://lists.alioth.debian.org/pipermail/soc-coordination/2015-June/002524.html</a></li>
+<li>Week 5: <a href="http://lists.alioth.debian.org/pipermail/soc-coordination/2015-June/002553.html" target="_blank" rel="noopener">http://lists.alioth.debian.org/pipermail/soc-coordination/2015-June/002553.html</a></li>
+</ul>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

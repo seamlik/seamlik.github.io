@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities from February to March 2017 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities from February to March 2017</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1492444080000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>After I started focusing my energy on my <a href="https://viska.chat" target="_blank" rel="noopener">capstone project</a>, fewer and fewer contents will be present in the subsequent posts.</p>
+<h2 id="Android-SDK-in-Debian"><a href="#Android-SDK-in-Debian" class="headerlink" title="Android SDK in Debian"></a>Android SDK in Debian</h2><p>Now that a large portion of the Android SDK are already settled down inside Debian, we need to help Debian users make use of our them without breaking too many things. Hence, I hacked the Gradle Android Plugin in Debian a bit so that when it detects that Debian’s Android SDK is being used, it does the following:</p>
+<ul>
+<li>Auto-select the latest <a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.BaseExtension.html#com.android.build.gradle.BaseExtension:buildToolsVersion" target="_blank" rel="noopener"><code>buildToolsVersion</code></a> installed in the system instead of downloading the specified version from internet.</li>
+<li>Auto-select the best <a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.BaseExtension.html#com.android.build.gradle.BaseExtension:compileSdkVersion" target="_blank" rel="noopener"><code>compileSdkVersion</code></a> installed in the system. If <code>23</code> was specified, it searches for <code>android-23</code>. If <code>android-23</code> is not installed, it searches for the oldest API level that is later than 23. If it misses again, an error is thrown.</li>
+</ul>
+<p>Right now this approach would make the compiled APKs unreproducible because AAPT carves <code>compileSdkVersion</code> into the <code>AndroidManifest.xml</code> in an APK. This is tricky because we only have packaged <a href="https://packages.debian.org/unstable/android-sdk-platform-23" target="_blank" rel="noopener"><code>android-23</code></a> and it is quite difficult to package any older <code>android.jar</code> due to that <a href="https://packages.debian.org/unstable/doclava-aosp" target="_blank" rel="noopener">Doclava</a> is <a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2017q1/002519.html" target="_blank" rel="noopener">highly unstable and bugful</a>.</p>
+<p>Besides the Gradle plugin we also wrote a Gradle init script that forces the build script of an Android application project to use the Gradle Android Plugin in Debian. The script is provided by <a href="https://packages.debian.org/unstable/android-sdk-helper" target="_blank" rel="noopener"><code>android-sdk-helper</code></a>.</p>
+<p>You can find more information in a <a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2017q1/002570.html" target="_blank" rel="noopener">mailing list post</a> and <a href="https://bits.debian.org/2017/03/build-android-apps-with-debian.html" target="_blank" rel="noopener">a post of Bits from Debian</a>.</p>
+<h2 id="Other-Debian-Activities"><a href="#Other-Debian-Activities" class="headerlink" title="Other Debian Activities"></a>Other Debian Activities</h2><ul>
+<li>Packaged <a href="https://tracker.debian.org/pkg/libscout" target="_blank" rel="noopener"><code>libscout</code></a>, a command line tool for scanning third party libraries used by an APK. Used already by F-Droid.</li>
+<li>Packaged <a href="https://tracker.debian.org/pkg/libsmali-1-java" target="_blank" rel="noopener"><code>libsmali-1-java</code></a> for <code>libscout</code>.</li>
+<li>Packaged <a href="https://tracker.debian.org/pkg/wala" target="_blank" rel="noopener"><code>wala</code></a> which would be used by Jack. But following the <a href="https://android-developers.googleblog.com/2017/03/future-of-java-8-language-feature.html" target="_blank" rel="noopener">deprecation of Jack</a>, I can stop chasing it now.</li>
+</ul>
+<h2 id="Viska"><a href="#Viska" class="headerlink" title="Viska"></a>Viska</h2><p>My capstone project Viska is an Android XMPP client with VoIP, and WebRTC became my first choice because of its ever trend. Turns out the reference implementation (by Google) has built-in support for Android and the codebase is huge and not fast to compile (just like Google’s other products), I opened up a <a href="https://gitlab.com/seamlik/prebuilts-webrtc-android" target="_blank" rel="noopener">repository on GitLab</a> providing prebuilt binaries including Javadoc of the WebRTC SDK for Android.</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

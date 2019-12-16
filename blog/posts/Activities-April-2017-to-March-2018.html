@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities from April 2017 to March 2018 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities from April 2017 to March 2018</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1523682038000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>Because of all the nonsense coming from my current school, I hadn’t been able to spend too much time on open source projects. As a result, this post sums up an entire year of activities after the previous one… Surprised me a bit too. 😰</p>
+<h2 id="Personal-Projects"><a href="#Personal-Projects" class="headerlink" title="Personal Projects"></a>Personal Projects</h2><p>Created a <a href="https://gitlab.com/seamlik/utils" target="_blank" rel="noopener">repository in GitLab</a> to store some useful scripts and config files that makes up my development environment. It mostly focuses on Debian development, but will add more stuff in other area when the time has come.</p>
+<p>The repository contains files that sets up <a href="https://wiki.debian.org/cowbuilder" target="_blank" rel="noopener"><code>cowbuilder</code></a> for all officially supported architectures in Debian, and some scripts to update the images, to build a package in all those architectures, and to build a long list of packages, all in parallel using a process pool. Very useful when you are testing reverse-build-dependencies.</p>
+<h2 id="Introducing-maven-repo-helper-extras"><a href="#Introducing-maven-repo-helper-extras" class="headerlink" title="Introducing maven-repo-helper-extras"></a>Introducing <a href="https://salsa.debian.org/seamlik-guest/maven-repo-helper-extras" target="_blank" rel="noopener"><code>maven-repo-helper-extras</code></a></h2><p>I spent several weeks writing some additional tools for the existing <a href="https://tracker.debian.org/pkg/maven-repo-helper" target="_blank" rel="noopener"><code>maven-repo-helper</code></a>. The package now contains 2 tools:</p>
+<ul>
+<li><code>mh_shlibdeps</code>: Like <code>dh_shlibdeps</code> but for Maven artifacts, successor to <code>mh_resolve_dependencies</code></li>
+<li><code>mh_genlauncher</code>: Generate simple launcher scripts for Java programs distributed as Maven artifacts.</li>
+</ul>
+<p>The package name is likely to be changed, and <code>mh_genlauncher</code> is likely to be replaced by something neater. Still waiting for other core devs in <code>pkg-java</code> team to review it.</p>
+<h2 id="Other-Activities"><a href="#Other-Activities" class="headerlink" title="Other Activities"></a>Other Activities</h2><ul>
+<li>Updated BND to <a href="https://tracker.debian.org/news/940380/accepted-bnd-350-1-source-into-unstable" target="_blank" rel="noopener">3.5.0</a>.<ul>
+<li>Updated Maven Bundle Plugin to <a href="https://tracker.debian.org/news/942832/accepted-maven-bundle-plugin-350-1-source-into-unstable" target="_blank" rel="noopener">3.5.0</a>.</li>
+<li>Updated OSGi Compendium to <a href="https://tracker.debian.org/news/939135/accepted-osgi-compendium-600-1-source-into-unstable" target="_blank" rel="noopener">6.0.0</a>.</li>
+<li>Introduced <a href="https://tracker.debian.org/pkg/felix-resolver" target="_blank" rel="noopener">Felix Resolver</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Google-Summer-of-Code-2018"><a href="#Google-Summer-of-Code-2018" class="headerlink" title="Google Summer of Code 2018"></a>Google Summer of Code 2018</h2><p>I am now a mentor under Debian organization in GSoC 2018, guiding students to contribute to our Android SDK packages.</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

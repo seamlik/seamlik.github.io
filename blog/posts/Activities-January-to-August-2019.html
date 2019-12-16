@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities from January to August 2019 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities from January to August 2019</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1566542460000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>Welcome, reader! This is a infrequently updated post series that logs my activities within open-source communities. I do not work on open-source full-time, although I sincerely would love to. Therefore the posts may cover a ridiculously long period (even a whole year).</p>
+<h2 id="Debian-amp-Google-Summer-of-Code"><a href="#Debian-amp-Google-Summer-of-Code" class="headerlink" title="Debian &amp; Google Summer of Code"></a>Debian &amp; Google Summer of Code</h2><p>Debian is a general-purpose Linux distribution that is widely used on the planet. I am a Debian Developer who works on packages related to Android SDK and the Java ecosystem.</p>
+<p>I started a new package in an attempt to build the Android framework <code>android.jar</code> using the upstream build systems involving <a href="https://ninja-build.org" target="_blank" rel="noopener">Ninja</a>, <a href="https://android.googlesource.com/platform/build/soong" target="_blank" rel="noopener">Soong</a> and others. Since the beginning we have been writing our own (very simple) makefiles to build the binaries in AOSP because their build logic tends to be simple and straightforward, until we worked on <code>android.jar</code>. Building it requires digging in so much code that it became incredibly hard to maintain, which is why we still haven’t brought in any newer version since <a href="https://tracker.debian.org/pkg/android-framework-23" target="_blank" rel="noopener"><code>android-framework-23</code></a>. This is problematic as developers can’t build any apps that target Android 7+.</p>
+<p>After a month of work, <a href="https://salsa.debian.org/android-tools-team/android-sdk-platform-latest" target="_blank" rel="noopener">this package</a> is finally done. After all its dependencies are packaged in the future, it will be good to upload. This is where the students of Google Summer of Code (GSoC) come in!</p>
+<p>This year’s GSoC projects related to Android SDK are:</p>
+<ul>
+<li><a href="https://wiki.debian.org/SummerOfCode2019/ProjectProposals/Kotlin" target="_blank" rel="noopener">Packaging Kotlin</a> by <a href="https://salsa.debian.org/m36-guest" target="_blank" rel="noopener">@m36</a></li>
+<li><a href="https://wiki.debian.org/SummerOfCode2019/ApprovedProjects/Android%20SDK%20Tools%20in%20Debian" target="_blank" rel="noopener">Packaging dependencies of <code>android.jar</code></a> by <a href="https://salsa.debian.org/kt-guest" target="_blank" rel="noopener">@kt</a>.</li>
+</ul>
+<p>Thanks to their hard work, we managed to upload these packages to Debian:</p>
+<ul>
+<li><a href="https://salsa.debian.org/android-tools-team/android-platform-build-kati" target="_blank" rel="noopener">android-platform-build-kati</a></li>
+<li><a href="https://tracker.debian.org/news/1048095/accepted-android-platform-external-doclava-900r42-1-source-into-experimental/l" target="_blank" rel="noopener">android-platform-external-doclava</a></li>
+<li><a href="https://salsa.debian.org/android-tools-team/android-platform-external-nist-sip" target="_blank" rel="noopener">android-platform-external-nist-sip</a></li>
+<li><a href="https://salsa.debian.org/android-tools-team/android-platform-external-rappor" target="_blank" rel="noopener">android-platform-external-rappor</a></li>
+<li><a href="https://salsa.debian.org/android-tools-team/android-platform-system-tools-hidl" target="_blank" rel="noopener">android-platform-system-tools-hidl</a></li>
+<li><a href="https://salsa.debian.org/java-team/jengelman-shadow" target="_blank" rel="noopener">jengleman-shadow</a></li>
+<li><a href="https://tracker.debian.org/news/1050485/accepted-android-platform-build-1810r23-3-source-all-amd64-into-unstable-unstable" target="_blank" rel="noopener">makeparallel</a></li>
+</ul>
+<h2 id="Voidbuilder"><a href="#Voidbuilder" class="headerlink" title="Voidbuilder"></a>Voidbuilder</h2><p><a href="https://www.npmjs.com/package/voidbuilder" target="_blank" rel="noopener">Voidbuilder</a> is a simple program that mimics <a href="https://packages.debian.org/sid/pbuilder" target="_blank" rel="noopener"><code>pbuilder</code></a> but uses <a href="https://docker.com" target="_blank" rel="noopener">Docker</a> and requires zero configuration. I have been using it privately and am quite satisfied.</p>
+<p>I made some bugfixes and adopted Node.js 12 so that it can make use the <a href="https://medium.com/@nodejs/announcing-a-new-experimental-modules-1be8d2d6c2ff" target="_blank" rel="noopener">latest experimental ES Modules support</a>. Version <a href="https://salsa.debian.org/seamlik/voidbuilder/commit/be4a62e316f8c03e31c870831ab3fc33a2fd3178" target="_blank" rel="noopener">1.0.0</a> and <a href="https://salsa.debian.org/seamlik/voidbuilder/commit/8459b54c3afa5ee76118073cd3026b1c5be7259a" target="_blank" rel="noopener">1.0.1</a> have been released.</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

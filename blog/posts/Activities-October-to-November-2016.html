@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities from October to November 2016 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities from October to November 2016</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1480574340000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>I did not finish too many significant jobs in the last 2 months, so I am combining them into one post. So far I still only work in Debian, but my (would-be) personal open source project <a href="https://github.com/seamlik/viska-android" target="_blank" rel="noopener">Viska</a> has started its conceptional stage, although there is not much effort spent in it yet.</p>
+<h2 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h2><ul>
+<li>Updated <a href="https://tracker.debian.org/news/802302" target="_blank" rel="noopener"><code>android-platform-external-libunwind</code></a> so that <code>android-platform-frameworks-base</code> can build against it.</li>
+<li>Uploaded <a href="https://tracker.debian.org/news/814300" target="_blank" rel="noopener"><code>android-platform-tools-swt</code></a> which provides various graphical tools in Android SDK using SWT.</li>
+<li>Uploaded <a href="https://tracker.debian.org/news/814301" target="_blank" rel="noopener"><code>android-framework-23</code></a> which provides the Android SDK Platform for API Level 23.</li>
+<li>Released <a href="https://tracker.debian.org/news/808921" target="_blank" rel="noopener"><code>gradle-debian-helper</code> 1.4</a> with new features:<ul>
+<li>A task of genetating Maven POMs for being used by <code>maven-repo-helper</code></li>
+<li>Let <code>javadoc</code> link to the local Javadoc of <code>default-jdk</code></li>
+</ul>
+</li>
+<li>Updated <code>libnative-platform-java</code> to <a href="https://tracker.debian.org/news/812120" target="_blank" rel="noopener">0.11</a></li>
+<li>Updated <code>gradle</code> to <a href="https://tracker.debian.org/news/814966" target="_blank" rel="noopener">3.1</a>. Also updated the following packages in order to be compatible with Gradle 3.x:<ul>
+<li><a href="https://tracker.debian.org/news/820417" target="_blank" rel="noopener"><code>android-platform-tools-base</code></a></li>
+<li><a href="https://tracker.debian.org/news/814980" target="_blank" rel="noopener"><code>bnd</code></a></li>
+<li><a href="https://tracker.debian.org/news/814978" target="_blank" rel="noopener"><code>gant</code></a></li>
+<li><a href="https://tracker.debian.org/news/815030" target="_blank" rel="noopener"><code>groovy</code></a></li>
+<li><a href="https://tracker.debian.org/news/815035" target="_blank" rel="noopener"><code>libgpars-groovy-java</code></a></li>
+</ul>
+</li>
+<li>Uploaded a new package <code>uncommons-watchmaker</code></li>
+<li>Updated <a href="https://tracker.debian.org/news/820274" target="_blank" rel="noopener"><code>android-sdk-meta</code></a> which now no longer installs symlinks to any shared libraries.</li>
+</ul>
+<h2 id="Plans-for-the-Next-Months"><a href="#Plans-for-the-Next-Months" class="headerlink" title="Plans for the Next Months"></a>Plans for the Next Months</h2><p>Debian Stretch is coming soon as the transition freeze has passed and the soft freeze is coming in January. Therefore, I don’t think there is enough time for the Nougat SDK getting into Stretch, since there’s <a href="https://ftp-master.debian.org/new/android-platform-libcore_7.0.0+r1-3.html" target="_blank" rel="noopener">one package</a> being waiting in the NEW queue for over a month! Without it being accepted we can’t step forward, so let’s hope the SDK is better shaped in Debian Buster. Sorry about that, we can’t do anything to accelerate the NEW queue. 😓</p>
+<p>Anyway, forget about the techs, let’s listen to some music! This December, I will be playing cello in <a href="https://www.facebook.com/events/1903887319840873" target="_blank" rel="noopener">a small concert</a> held in Taichung featuring Star Wars and some songs arranged by <a href="http://www.alanensemble.com/pages/ResumeAlan.html" target="_blank" rel="noopener">Mr. Alan MacDonald</a>. If you live in Taichung, a nice city in Taiwan, please come!</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

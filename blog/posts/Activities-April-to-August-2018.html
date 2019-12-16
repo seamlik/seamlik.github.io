@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities from April to August 2018 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities from April to August 2018</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1537734472000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>Welcome readers, this is a infrequently updated post series that logs my activities within open-source communities. I want my work to be as transparent as possible in order to promote open governance, a policy feared even by some “mighty” nations.</p>
+<p>I do not work on open-source full-time, although I sincerely would love to. Therefore the posts may cover a ridiculously long period (even a whole year).</p>
+<h2 id="A-Revamped-Blog-Site"><a href="#A-Revamped-Blog-Site" class="headerlink" title="A Revamped Blog Site"></a>A Revamped Blog Site</h2><p>This website is now using a new theme called <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Minima</a> from the <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> developers. It’s a elegant and simplistic one featured in <a href="https://this-week-in-rust.org" target="_blank" rel="noopener">various</a> <a href="https://rustwasm.github.io" target="_blank" rel="noopener">blogs</a> involved in the Rust community. I am myself a huge fan of Rust, so I immediately had a crush on the theme. Although this idea already came out probably a year ago, the transition took so long because I didn’t have the time to focus on learning front-end technologies.</p>
+<p>At first I thought I must implement the theme on my own as I would be using Hexo but it was for Jekyll, but turns out it was quite easy to forcibly apply it under a different static site generator. Now I’m pretty satisfied the outcome, though I am just clueless on how to make a good homepage, hence the one it has now.</p>
+<h2 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h2><p>Debian is a general-purpose Linux distribution that is widely used on the planet. I am currently a Debian Maintainer who works on packages related to Android SDK and the Java ecosystem.</p>
+<ul>
+<li>Uploaded <a href="https://tracker.debian.org/news/958426/accepted-gradle-44-1-source-into-experimental" target="_blank" rel="noopener">Gradle 4.4</a> to <code>experimental</code>. I didn’t investigate how to make <code>gradle-debian-helper</code> compatible with the new release until Emmanuel Bourg did it. It’s now <a href="https://tracker.debian.org/news/987997/accepted-gradle-44-2-source-into-unstable" target="_blank" rel="noopener">in <code>unstable</code></a>.</li>
+<li>Introduced new package <a href="https://packages.debian.org/sid/libdd-plist-java" target="_blank" rel="noopener"><code>dd-plist</code></a> which is needed by Gradle 4.4.</li>
+<li>We’ve started updating the Android SDK to Oreo<ul>
+<li>Uploaded <a href="https://tracker.debian.org/news/979030/accepted-android-platform-external-boringssl-810r23-1-source-amd64-into-unstable-unstable" target="_blank" rel="noopener"><code>android-platform-external-boringssl</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/969349/accepted-android-platform-external-libselinux-810r23-1-source-amd64-into-experimental-experimental" target="_blank" rel="noopener"><code>android-platform-external-libselinux</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/959286/accepted-android-platform-external-libunwind-810r23-1-source-into-experimental" target="_blank" rel="noopener"><code>android-platform-external-libunwind</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/959450/accepted-android-platform-frameworks-native-1810r23-1-source-into-experimental" target="_blank" rel="noopener"><code>android-platform-frameworks-native</code></a></li>
+<li>Uploaded <a href="https://tracker.debian.org/news/964503/accepted-android-platform-libcore-810r23-1-source-into-experimental" target="_blank" rel="noopener"><code>android-platform-libcore</code></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Voidbuilder-A-New-Builder-for-Debian"><a href="#Voidbuilder-A-New-Builder-for-Debian" class="headerlink" title="Voidbuilder: A New Builder for Debian"></a>Voidbuilder: A New Builder for Debian</h2><p>I have been writing a simple Node.js application called “Voidbuilder” which serves as an alternative to tools like <a href="https://packages.debian.org/unstable/pbuilder" target="_blank" rel="noopener"><code>pbuilder</code></a> or <a href="https://wiki.debian.org/sbuild" target="_blank" rel="noopener"><code>sbuild</code></a>. The main difference is that is replaces the <code>chroot</code> part of those tools with <a href="https://docker.com" target="_blank" rel="noopener">Docker</a>. It also comes with goodies like zero-configuration and the ability to start a container with all build-dependencies installed so you don’t need to contaminate your machine with tons of development packages just for working on a package.</p>
+<p>Writing such admin/devel tools in JavaScript is an odd choice which few people would agree, I assume. My rationale includes that it’s much more powerful than shell scripts and has a richer ecosystem than Python. While I am satisfied with the coding experience, I am still annoyed that JavaScript lacks so many features that modern OOP languages have (e.g. enumerations, interfaces). Luckily, it only took me a few weeks to get the prototype running.</p>
+<p>The code is hosted on <a href="https://salsa.debian.org/seamlik-guest/voidbuilder" target="_blank" rel="noopener">Salsa</a> and it will get a release on NPM soon after I implement the second feature I mentioned above.</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>

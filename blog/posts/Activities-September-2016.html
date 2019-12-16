@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link rel="icon" type="image/svg+xml" href="/assets/seamlik.svg"/>
+<link rel="stylesheet" href="/assets/main.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Open-Source Activities in September 2016 | Blog by seamlik</title>
+<meta name="generator" content="Hexo 4.1.1"><link rel="alternate" href="/atom.xml" title="Blog by seamlik" type="application/atom+xml">
+</head>
+<body>
+  <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Blog by seamlik</a>
+  </div>
+</header>
+
+  <main class="page-content"><div class="wrapper">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">My Open-Source Activities in September 2016</h1>
+        <p class="post-meta">
+          <time class="dt-published x-late-timestamp" itemprop="datePublished">
+            1475376120000
+          </time>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="/assets/late-timestamps.js"></script>
+        </p>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>Finally I decided to mark down my activities in open source communities every several months.</p>
+<p>I’ve been maintaining a blog of my own but actually I just put it at the corner and let it get dusty, which was not my intention in the first place. I always felt that there’s not much to write down, well, which was also not right. Writing articles about my work may not interest most random people, but at least it can be considered being responsible of my actions in open source communities.</p>
+<p>The following is the brief notes of my open source activities in September 2016:</p>
+<h2 id="Applied-for-Debian-Maintainer"><a href="#Applied-for-Debian-Maintainer" class="headerlink" title="Applied for Debian Maintainer"></a>Applied for Debian Maintainer</h2><p>I’ve spent about a year in contributing to Debian, all began in Google Summer of Code 2015 when I was working on <a href="https://wiki.debian.org/SummerOfCode2015/StudentApplications/KaichungYan" target="_blank" rel="noopener">packaging Android SDK in Debian</a>. After that I kept working on the project, but most of the time I need to file a Request for Sponsor (RFS) for asking a Debian Developer for reviewing on my packages. <a href="https://wiki.debian.org/HansChristophSteiner" target="_blank" rel="noopener">Hans-Christoph Steiner</a>, Markus Koschany and Emmanuel Bourg did most of the review for me. Now that I am familiar with packaging, I should be qualified to apply for a DM identity. Being a DM, I can gain upload permissions to my own packages, which will ease the maintenance. According the <a href="https://nm.debian.org/process/83" target="_blank" rel="noopener">application</a>, I have been approved (🎉🎊) but not officially a DM. Thanks to Debian Developer nthykier who told me on IRC that my key is waiting for being synced to the official keyring, which will probably happen in October.</p>
+<p>Thanks for the advocations from Hans-Christoph Steiner, Markus Koschany and Emmanuel Bourg!</p>
+<h2 id="Started-Updating-Android-Packages-to-Nougat"><a href="#Started-Updating-Android-Packages-to-Nougat" class="headerlink" title="Started Updating Android Packages to Nougat"></a>Started Updating Android Packages to Nougat</h2><p>With the exciting release of Android 7 Nougat comes the beginning of the CyanogenMod developers’ busy period, as well as Debian’s android-tools team’s. One of our teammates Chirayu Desai notified us someday that the source code of Android N is released, after which I summarized some of my <a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2016q3/001740.html" target="_blank" rel="noopener">ideas and plan</a> on the mailing list. There will be several changes for the Nougat update:</p>
+<ul>
+<li><strong>ARM &amp; MIPS builds are brought back.</strong> Actually they were there before I rid them out. 😓 We decided to maintain x86 binaries only because Google only supports and releases Android SDK in x86. Now I know how to setup an environment of other architectures as well as how to build packages for these architectures, it would be great to support them again. Plus the Debian Lava team seemed to care about ADB on ARM64 by complaining on the <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=817" target="_blank" rel="noopener">removal bug</a>. Good news is that Chirayu Desai is also willing to help me in these architectures since he does not use any x86 machines. 😂</li>
+<li><strong><code>AndroidConfig.h</code> are 🔥.</strong> <a href="https://android.googlesource.com/platform/build/+/android-6.0.1_r68/core/combo/include/arch" target="_blank" rel="noopener">These header files</a> contains macros dealing with architecture details and must be included in all C/C++ binaries in AOSP. Since Nougat, the AOSP team removed the header files and we are able remove the use of <a href="https://wiki.debian.org/BuildProfileSpec" target="_blank" rel="noopener">build profiles</a> in <a href="https://tracker.debian.org/pkg/android-platform-build" target="_blank" rel="noopener"><code>android-platform-build</code></a>.</li>
+<li><strong><a href="https://tracker.debian.org/pkg/android-platform-system-tools-aidl" target="_blank" rel="noopener"><code>aidl</code></a> is now a separated package.</strong> It was previously a package in <a href="https://android.googlesource.com/platform/frameworks/base/+/android-6.0.1_r68/tools/aidl" target="_blank" rel="noopener"><code>android-platform-frameworks-base</code></a>. I really don’t like the AOSP team moving stuff around. They have a gigantic project tree to play with but we don’t!</li>
+</ul>
+<p>In this month I have prepared updates for the following packages:</p>
+<ul>
+<li><a href="https://tracker.debian.org/pkg/android-platform-external-doclava" target="_blank" rel="noopener"><code>android-platform-external-doclava</code></a> (not yet uploaded)</li>
+<li><a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2016q3/001873.html" target="_blank" rel="noopener"><code>android-platform-external-libselinux</code></a></li>
+<li><a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2016q3/001883.html" target="_blank" rel="noopener"><code>android-platform-external-libunwind</code></a></li>
+<li><a href="https://tracker.debian.org/news/799608" target="_blank" rel="noopener"><code>android-platform-frameworks-native</code></a></li>
+<li><a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2016q3/001889.html" target="_blank" rel="noopener"><code>android-platform-libcore</code></a></li>
+<li><a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2016q3/001896.html" target="_blank" rel="noopener"><code>android-platform-system-core</code></a></li>
+<li><a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2016q3/001914.html" target="_blank" rel="noopener"><code>android-platform-system-extras</code></a></li>
+<li><a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2016q3/001929.html" target="_blank" rel="noopener"><code>android-platform-system-tools-aidl</code></a></li>
+</ul>
+<p>For the moment they are being uploaded to the experimental distribution. After all of the existing packages are updated to 7.0.0+r1, we will upload all of them to Unstable.</p>
+<h2 id="Hacking-gradle-debian-helper-So-That-It-Auto-generates-Maven-POMs"><a href="#Hacking-gradle-debian-helper-So-That-It-Auto-generates-Maven-POMs" class="headerlink" title="Hacking gradle-debian-helper So That It Auto-generates Maven POMs"></a>Hacking <code>gradle-debian-helper</code> So That It Auto-generates Maven POMs</h2><p>Every Debian packages providing Java libraries should install Maven POMs into <code>/usr/share/maven-repo</code> which serve as the metadata. Without these metadata, these libraries would be uneasy to be used by other Java packages. Gradle projects do not have Maven POMs, so the package maintainers need to write custom rules to generate them.</p>
+<p>Most of the Android packages are built with Gradle and <code>gradle-debian-helper</code>, and I need to provide the same scripts for them in order to generate the Maven POMs. Weeks ago I noticed that almost all Android packages containing Java libraries are unreproducible because the order of the dependencies in the Maven POMs are unsorted and random, and I had to modify every one of those packages to sort the dependencies. If the Maven POM generation was done by <code>gradle-debian-helper</code>, my life could have been better.</p>
+<p>The feature is being developed at <a href="https://github.com/seamlik/gradle-debian-helper/tree/debian-pom-generation" target="_blank" rel="noopener">GitHub</a>. The obstacle I met so far is that it is tricky when you are writing Gradle plugins in Java and you need to access the third-party classes used by Gradle classes. The compiler complained that I must not convert <code>org.apache.maven.model.Dependency</code> to <code>org.apache.maven.model.Dependency</code>, which sounded nonsense. My first guess was that the build script (<code>pom.xml</code>) of gradle-debian-helper links to the JARs in <code>/usr/share/java</code> instead of POMs in <code>/usr/share/maven-repo</code>. I modified the build script so that it links to POMs in <code>/usr/share/maven-repo</code> but it just failed to load <code>pmaven-debian.pom</code>. I’ve reported this <a href="https://bugs.debian.org/837882" target="_blank" rel="noopener">bug</a>.</p>
+<h2 id="Other-Activities"><a href="#Other-Activities" class="headerlink" title="Other Activities"></a>Other Activities</h2><ul>
+<li><strong>Fix Gradle’s failure to launch.</strong> Previously, Gradle still harcoded the JAR versions in its classpath, and a new upstream release of JSch <a href="https://bugs.debian.org/836391" target="_blank" rel="noopener">broke Gradle entirely</a>. I modified the build scripts of Gradle so that it used a versionless classpath without manually removing the dependency declarations. The tricky part is that Gradle builds using itself, so even now we’ve fixed the Gradle in Debian, the new release of Gradle in Ubuntu still <a href="https://bugs.launchpad.net/ubuntu/+source/gradle/+bug/1622550" target="_blank" rel="noopener">FTBFS</a>. I asked on the IRC and was told that I need to contact the Ubuntu archive managers and ask them to rebootstrap the package, which I did afterwards and <a href="https://launchpad.net/~cjwatson" target="_blank" rel="noopener">Colin Watson</a> helped. Thank you!</li>
+<li><strong>Polished the packaging of Gradle.</strong> This includes dropping the generation of classpaths in the JAR manifest (otherwise JVM loads 2 sets of the same JARs) and making the generated Maven POMs reproducible.</li>
+<li><strong>Prepared updates for several packages</strong> including <a href="https://lists.alioth.debian.org/pipermail/android-tools-devel/2016q3/001749.html" target="_blank" rel="noopener">android-platform-frameworks-native/6.0.1+r55-1</a>.</li>
+<li><strong>Reported a <a href="https://bugs.debian.org/837873" target="_blank" rel="noopener">wishlist bug</a></strong> that <code>src:p7zip</code> should provide developemnt packages for <code>lib7z.so</code>.</li>
+<li><strong>Reported bugs about <a href="https://bugs.debian.org/838033" target="_blank" rel="noopener"><code>src:closure-compiler</code></a> and <a href="https://bugs.debian.org/838034" target="_blank" rel="noopener"><code>src:zabbix</code></a> who should switch to <a href="https://packages.debian.org/libandroid-json-java" target="_blank" rel="noopener"><code>libandroid-json-java</code></a> from dusty <a href="https://packages.debian.org/libandroid-json-java" target="_blank" rel="noopener"><code>libandroid-json-org-java</code></a>.</strong> Turns out that the JSON library in AOSP is used by external projects, although I wonder why somebody would reply on a library without any API stability or version information. Anyway, it is used by packages in Debian, which was why I built this library in <a href="https://tracker.debian.org/pkg/android-platform-libcore" target="_blank" rel="noopener"><code>src:android-platform-libcore</code></a> in the first place.</li>
+<li><strong>Reported a bug about <code>qemubuilder</code></strong> failing on creating images for <a href="https://bugs.debian.org/838753" target="_blank" rel="noopener"><code>arm64</code></a></li>
+<li><strong>Manually closed <a href="https://bugs.debian.org/816083" target="_blank" rel="noopener">the bug</a></strong> about an auto-transition of <code>android-platform-build</code> which is long ended.</li>
+</ul>
+<h2 id="Plans-for-the-Next-Months"><a href="#Plans-for-the-Next-Months" class="headerlink" title="Plans for the Next Months"></a>Plans for the Next Months</h2><ul>
+<li>Update <a href="https://tracker.debian.org/pkg/gradle" target="_blank" rel="noopener">Gradle</a> to 3.1.</li>
+<li>Finish the update of all Android packages to Nougat.</li>
+<li>Fix and upload <a href="https://anonscm.debian.org/cgit/android-tools/android-framework-23.git" target="_blank" rel="noopener">android-framework-23</a>, the last missing piece of a usable SDK.</li>
+</ul>
+<p>Hope I can also manage to pass my exams after all these. 🙄</p>
+
+      </div>
+    </article>
+  </div></main>
+  <footer class="site-footer h-card">
+
+  <div class="wrapper"><h2 class="footer-heading">Blog by seamlik</h2><div class="footer-col-wrapper">
+
+  <nav class="footer-col footer-col-1">
+    <ul class="social-media-list">
+      <li class="nav-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/archives.html">Archives</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="/atom.xml">Feed</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col-2">
+    <ul class="social-media-list">
+      <li>
+        <a href="https://linkedin.com/in/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-linkedin"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/seamlik" target="_blank" rel="noopener">
+          <span class="fab fa-github"></span>
+          <span>seamlik</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col-3">
+    <p>© 殷啟聰 | Kai-Chung Yan</p>
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Theme by <a href="https://github.com/jekyll/minima" target="_blank" rel="noopener">Jekyll Minima</a></p>
+  </div>
+
+  </div></div>
+
+</footer>
+</body>
+</html>
