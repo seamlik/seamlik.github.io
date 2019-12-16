@@ -1,9 +1,9 @@
 {
   "hexo": {
-    "version": "3.9.0"
+    "version": "4.1.1"
   },
   "dependencies": {
-    "hexo": "3.9.0",
+    "hexo": "4.1.1",
     "hexo-deployer-git": "",
     "hexo-generator-archive": "",
     "hexo-generator-feed": "",
