@@ -1,15 +1,13 @@
 ---
-title: About Kai-Chung Yan and This Site
+title: About Me and This Site
 ---
-
-My name is Kai-Chung Yan (殷啟聰). I am a college student born in somewhere terrifying. I love using and working on open-source software.
 
 Many thanks to the authors of Hexo and this elegant theme!
 
 Unfortunately this blog site does not support commenting as I am too lazy. So if anyone has anything to discuss regarding the posts and the site, feel free to reach me via the social links at the bottom of every page.
 
-What Do I Do?
--------------
+What Do I Do
+------------
 
 I am a Debian Developer. More infomation can be found at [my wiki page](https://wiki.debian.org/KaichungYan).
 
